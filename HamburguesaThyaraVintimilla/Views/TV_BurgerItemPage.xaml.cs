@@ -34,11 +34,6 @@ public partial class BurgerItemPage : ContentPage
         App.BurgerRepo.DeleteItem(Item);
         Shell.Current.GoToAsync("..");
     }
-    // private void OnCheckBoxCheckedChanged(object sender,
-    //CheckedChangedEventArgs e)
-    // {
-    // _flag = e.Value;
-    //}
-
+    
 
 }
