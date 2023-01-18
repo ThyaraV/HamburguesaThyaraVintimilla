@@ -4,9 +4,9 @@ namespace HamburguesaThyaraVintimilla;
 
 public partial class App : Application
 {
-	public static BurgerDatabase BurgerRepo { get; set; }
+	public static TV_BurgerDatabase BurgerRepo { get; set; }
 
-	public App(BurgerDatabase repo)
+	public App(TV_BurgerDatabase repo)
 	{
 		InitializeComponent();
 

@@ -6,9 +6,9 @@ public partial class BurgerItemPage : ContentPage
 {
     //Burger Item = new Burger();
     //bool _flag;
-    public Burger Item
+    public TV_Burger Item
     {
-        get => BindingContext as Burger;
+        get => BindingContext as TV_Burger;
         set => BindingContext = value;
     }
     public BurgerItemPage()
