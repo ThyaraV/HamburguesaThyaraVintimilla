@@ -30,11 +30,12 @@ namespace HamburguesaThyaraVintimilla.Data
             //return result;
             if(burger.Id != 0)
             {
-                return conn.Update(burger);
+                conn.Update(burger);
+                return burger.Id;
             }
             else
             {
-                return conn.Insert(burger.Id);
+                return conn.Insert(burger);
             }
         }
         public List<TV_Burger> GetAllBurgers()

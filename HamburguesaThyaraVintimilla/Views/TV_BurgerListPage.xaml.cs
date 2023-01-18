@@ -41,7 +41,7 @@ public partial class BurgerListPage : ContentPage
         if (burgerTV == null) return;
         Shell.Current.GoToAsync(nameof(BurgerItemPage), true, new Dictionary<string, object>
         {
-            ["Item"] = new TV_Burger()
+            {"Item",burgerTV }
         });
         ((CollectionView)sender).SelectedItem = null;
     }
