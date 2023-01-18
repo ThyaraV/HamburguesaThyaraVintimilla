@@ -38,6 +38,8 @@ public partial class BurgerListPage : ContentPage
     private void TV_CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         TV_Burger burgerTV = e.CurrentSelection.FirstOrDefault() as TV_Burger;
+        if (burgerTV == null)
+            return;
         Shell.Current.GoToAsync(nameof(BurgerItemPage), true, new Dictionary<string, object>
         {
             {"Item",burgerTV }
