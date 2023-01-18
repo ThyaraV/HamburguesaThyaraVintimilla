@@ -19,7 +19,7 @@ public partial class BurgerListPage : ContentPage
 
     private void actualizarDatos()
     {
-        List<TV_Burger> burger = App.BurgerRepo.GetAllBurgers();
+        List<Burger> burger = App.BurgerRepo.GetAllBurgers();
         burgerList.ItemsSource = burger;
     }
     //async void OnItemAdded(object sender, EventArgs e)
@@ -31,16 +31,16 @@ public partial class BurgerListPage : ContentPage
     {
         Shell.Current.GoToAsync(nameof(BurgerItemPage), true, new Dictionary<string, object>
         {
-            ["Item"] = new TV_Burger()
+            ["Item"] = new Burger()
         });
     }
 
     private void TV_CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        TV_Burger burgerTV = e.CurrentSelection.FirstOrDefault() as TV_Burger;
+        Burger burgerTV = e.CurrentSelection.FirstOrDefault() as Burger;
         Shell.Current.GoToAsync(nameof(BurgerItemPage), true, new Dictionary<string, object>
         {
-            ["Item"] = new TV_Burger()
+            ["Item"] = new Burger()
         });
         ((CollectionView)sender).SelectedItem = null;
     }

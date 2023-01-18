@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace HamburguesaThyaraVintimilla.Models
 {
     [Table("burger")]
-    public class TV_Burger
+    public class Burger
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

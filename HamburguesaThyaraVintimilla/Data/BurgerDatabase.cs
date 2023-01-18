@@ -8,11 +8,11 @@ using SQLite;
 
 namespace HamburguesaThyaraVintimilla.Data
 {
-    public class TV_BurgerDatabase
+    public class BurgerDatabase
     {
         string _dbPath;
         private SQLiteConnection conn;
-        public TV_BurgerDatabase(string DatabasePath)
+        public BurgerDatabase(string DatabasePath)
         {
             _dbPath = DatabasePath;
         }
@@ -21,29 +21,30 @@ namespace HamburguesaThyaraVintimilla.Data
             if (conn != null)
                 return;
             conn = new SQLiteConnection(_dbPath);
-            conn.CreateTable<TV_Burger>();
+            conn.CreateTable<Burger>();
         }
-        public int AddNewBurger(TV_Burger burger)
+        public int AddNewBurger(Burger burger)
         {
             Init();
-            int result = conn.Insert(burger);
-            return result;
+            //int result = conn.Insert(burger);
+            //return result;
             if(burger.Id != 0)
             {
-                return conn.Update(burger);
+                conn.Update(burger);
+                return burger.Id;
             }
             else
             {
-                return conn.Insert(burger.Id);
+                return conn.Insert(burger);
             }
         }
-        public List<TV_Burger> GetAllBurgers()
+        public List<Burger> GetAllBurgers()
         {
             Init();
-            List<TV_Burger> burgers = conn.Table<TV_Burger>().ToList();
+            List<Burger> burgers = conn.Table<Burger>().ToList();
             return burgers;
         }
-        public int DeleteItem(TV_Burger item)
+        public int DeleteItem(Burger item)
         {
             Init();
             return conn.Delete(item);

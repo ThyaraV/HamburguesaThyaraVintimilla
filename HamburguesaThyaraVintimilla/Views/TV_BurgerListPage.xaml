@@ -9,7 +9,7 @@
                         SelectionMode="Single"
                         SelectionChanged="TV_CollectionView_SelectionChanged">
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:TV_Burger">
+                <DataTemplate x:DataType="models:Burger">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
