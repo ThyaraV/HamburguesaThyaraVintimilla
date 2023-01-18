@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HamburguesaThyaraVintimilla.Views.BurgerListPage"
-             Title="BurgerListPage"
+             Title="TV_BurgerListPage"
              xmlns:models="clr-namespace:HamburguesaThyaraVintimilla.Models">
     <Grid RowDefinitions="*,Auto">
         <CollectionView x:Name="burgerList"
                         SelectionMode="Single"
                         SelectionChanged="TV_CollectionView_SelectionChanged">
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Burger">
+                <DataTemplate x:DataType="models:TV_Burger">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
